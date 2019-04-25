@@ -1,0 +1,14 @@
+#ifndef PRODUCTO_INCLUDED
+#define PRODUCTO_INCLUDED
+
+typedef struct
+{
+    char nombre[50];
+    char fechaVencimiento[50];
+    char codigoBarra[13];
+    char proveedor[50];
+    float Precio;
+
+}eProducto;
+
+#endif // PRODUCTO_INCLUDED
