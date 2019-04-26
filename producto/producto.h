@@ -12,8 +12,11 @@ typedef struct
 
 
 eProducto pedirProducto();
+
 void mostrarProducto(eProducto);
+
 void cargarArray(int,eProducto[]);
+
 void mostrarArray(int,eProducto[]);
 
 

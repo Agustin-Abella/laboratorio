@@ -25,7 +25,7 @@ int inserteProducto(eProducto elProducto,eProducto listado[])
 int borrarProducto(eProducto elProducto,eProducto listado[])
 {
     int indice;
-    indice = existeProducto(elProducto,listado[indice]);
+    indice = existeProducto(elProducto,listado[]);
     if(indice !=-1)
     {
         listado[indice].estado =-1;
@@ -108,3 +108,31 @@ void mostrarProducto(eProducto elParametroProducto)
     printf("\nfecha vencimiento: \t %s \n",elParametroProducto.fechaVencimiento);
     printf("\n");
 }
+
+int editarProducto(eProducto lista[],int tam)
+{
+    int i;
+    char codigo[50];
+    int loEncontro =0;
+    printf("ingrese el codigo de barras: ");
+    fflush(stdin);
+    gets(codigo);
+    for(i=0; i <tam;i++)
+    {
+        if(strcmp(lista[i].codigoBarra,codigo)==0)
+        {
+            printf("ingrese el nuevo precio: ");
+            scanf("%f",&lista[i].Precio);
+            loEncontro =1;
+            break;
+        }
+
+
+    }
+    if (loEncontro==0)
+        {
+            printf("codigo inexistente");
+        }
+    return 0;
+}
+

@@ -15,6 +15,18 @@ int main()
     //cargar array
     //mostrar array
 
+
+    int opciones;
+
+    switch(opciones)
+    {
+
+    case 1:
+        break;
+    case 2:
+        break;
+    }
+
     construirArray(unProducto);
     return 0;
 }
