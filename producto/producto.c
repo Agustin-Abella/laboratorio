@@ -2,11 +2,15 @@
 #include <stdlib.h>
 #include <string.h>
 #include "producto.h"
+
+
 int inserteProducto(eProducto,eProducto[]);
 int dameLugarLibre(eProducto[]);
 int existeProducto(eProducto,eProducto[]);
 int borrarProducto(eProducto,eProducto[]);
 int editarProducto(eProducto,eProducto[]);
+//int mostrarArray(eProducto listado[],int tam);
+void mostrarProducto(eProducto elParametroProducto);
 
 int inserteProducto(eProducto elProducto,eProducto listado[])
 {
@@ -21,7 +25,7 @@ int inserteProducto(eProducto elProducto,eProducto listado[])
 int borrarProducto(eProducto elProducto,eProducto listado[])
 {
     int indice;
-    indice = existeProducto(elProducto,listado[]);
+    indice = existeProducto(elProducto,listado[indice]);
     if(indice !=-1)
     {
         listado[indice].estado =-1;
